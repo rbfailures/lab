@@ -73,7 +73,7 @@ class Television:
         else:
             pass
 
-    def __str__(self) -> String:
+    def __str__(self) -> str:
         """
         Method to write Television Object and its characteristics as a string
         :return: Television Object as string
