@@ -37,7 +37,7 @@ class Television:
         """
         return self.__channel
 
-    def power(self):
+    def power(self) -> None:
         """
         Method to set the status of the Television to on or off
         """
@@ -46,9 +46,10 @@ class Television:
         else:
             self.__status = True
 
-    def channel_up(self):
+    def channel_up(self) -> None:
         """
-        Method to increase the channel of Television object by increments of 1, not to increase past 3
+        Method to increase the channel of Television object by increments of 1, not to increase past 3, and will reset
+        to 0 if this method is called when channel is 3
         """
         if self.__status:
             if self.__channel == Television.MAX_CHANNEL:
@@ -58,9 +59,10 @@ class Television:
         else:
             pass
 
-    def channel_down(self):
+    def channel_down(self) -> None:
         """
         Method to decrease the channel of Television object by increments of 1, not to decrease past 0
+        If channel is already 0 when this method is called, then channel will be set to 3
         """
         if self.__status:
             if self.__channel == Television.MIN_CHANNEL:
@@ -70,9 +72,10 @@ class Television:
         else:
             pass
 
-    def volume_up(self):
+    def volume_up(self) -> None:
         """
         Method to increase the volume of Television object by 1, not to go past 2
+        If volume is already 2, then it will stay at 2
         """
         if self.__status:
             if self.__volume == Television.MAX_VOLUME:
@@ -82,9 +85,10 @@ class Television:
         else:
             pass
 
-    def volume_down(self):
+    def volume_down(self) -> None:
         """
         Method to decrease the volume of Television object, not to go past 0
+        If volume is at 0, then it will not go past 0
         """
         if self.__status:
             if self.__volume == Television.MIN_VOLUME:
