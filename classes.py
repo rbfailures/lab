@@ -16,6 +16,27 @@ class Television:
         self.__volume = Television.MIN_VOLUME
         self.__status = False
 
+    def get_status(self) -> bool:
+        """
+        Method to get status
+        :return: On/Off
+        """
+        return self.__status
+
+    def get_volume(self) -> int:
+        """
+        Method to get the volume of Television object
+        :return: volume setting
+        """
+        return self.__volume
+
+    def get_channel(self) -> int:
+        """
+        Method to get the channel of Television object
+        :return: channel setting
+        """
+        return self.__channel
+
     def power(self):
         """
         Method to set the status of the Television to on or off
