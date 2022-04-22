@@ -2,40 +2,19 @@ class Television:
     """
     A class representing details for a Television object
     """
-    MIN_CHANNEL = 0     # Minimum TV channel
-    MAX_CHANNEL = 3     # Maximum TV channel
+    MIN_CHANNEL: int = 0     # Minimum TV channel
+    MAX_CHANNEL: int = 3     # Maximum TV channel
 
-    MIN_VOLUME = 0      # Minimum TV volume
-    MAX_VOLUME = 2      # Maximum TV volume
+    MIN_VOLUME: int = 0      # Minimum TV volume
+    MAX_VOLUME: int = 2      # Maximum TV volume
 
     def __init__(self) -> None:
         """
         Constructor to create initial state of a Television object
         """
-        self.__channel = Television.MIN_CHANNEL
-        self.__volume = Television.MIN_VOLUME
-        self.__status = False
-
-    def get_status(self) -> bool:
-        """
-        Method to get status
-        :return: On/Off
-        """
-        return self.__status
-
-    def get_volume(self) -> int:
-        """
-        Method to get the volume of Television object
-        :return: volume setting
-        """
-        return self.__volume
-
-    def get_channel(self) -> int:
-        """
-        Method to get the channel of Television object
-        :return: channel setting
-        """
-        return self.__channel
+        self.__channel: int = Television.MIN_CHANNEL
+        self.__volume: int = Television.MIN_VOLUME
+        self.__status: bool = False
 
     def power(self) -> None:
         """
